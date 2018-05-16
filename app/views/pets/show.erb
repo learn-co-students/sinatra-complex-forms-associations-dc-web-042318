@@ -1,1 +1,10 @@
-show.erb
+<h1>This is a pet page!</h1>
+<p>Pet Name: <%=@pet.name%></p>
+<p>Owner Name:
+  <% if @pet.owner %>
+    <%=@pet.owner.name%>
+  <% else %>
+    "No one owns this pet!"
+  <% end %>
+</p>
+<p><a href="<%=@pet.id%>/edit">Edit</a></p>
